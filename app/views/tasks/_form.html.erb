@@ -15,5 +15,9 @@
  <%= f.label :status, '進行状況' %>
  <%= f.select :status, [['未着手'], ['進行中'], ['達成済']] %>
  
+ <%= f.label :deadlinemonth, '期限' %>
+ <%= f.text_field :deadlinemonth %>月
+ <%= f.text_field :deadlinedate %>日
+ 
  <%= f.submit '作成' %>
 <% end %>

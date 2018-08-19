@@ -2,6 +2,7 @@
 
 <p>タスク: <%= @task.content %></p>
 <p>進行状況: <%= @task.status %></p>
+<p>期限: <%= @task.deadlinemonth %>/<%= @task.deadlinedate %></p>
 
 <%= link_to '一覧に戻る', tasks_path %>
 <%= link_to '編集する', edit_task_path(@task) %>
