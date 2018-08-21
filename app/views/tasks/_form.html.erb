@@ -1,5 +1,5 @@
 <div class="row">
- <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6">
+ <div class="col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6">
   <%= form_for(task) do |f| %>
    <% if task.errors.any? %>
     <div id="error_explanation" class="alert alert-warning">
@@ -23,8 +23,8 @@
    
    <div class="form-group">
     <%= f.label :deadlinemonth, '期限' %>
-    <%= f.select :deadlinemonth, options_for_select((1..12)), class: 'form-control' %>月
-    <%= f.select :deadlinedate,  options_for_select((1..31)), class: 'form-control'  %>日
+    <%= f.select :deadlinemonth, options_for_select((1..12)), {}, class: 'form-control' %>月
+    <%= f.select :deadlinedate,  options_for_select((1..31)), {}, class: 'form-control'  %>日
    </div>
    
    <%= f.submit '追加', class: 'btn btn-primary' %>
