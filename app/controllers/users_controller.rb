@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    redirect_to tasks_url
   end
 
   def new
@@ -26,6 +26,6 @@ class UsersController < ApplicationController
   private
   
   def user_params
-    params.require(:user).permit(:name, :email, :password, :passowrd_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
